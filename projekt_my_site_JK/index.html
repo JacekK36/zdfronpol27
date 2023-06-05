@@ -8,41 +8,112 @@
     <title>Najlepszy_transport_zwierząt</title>
 </head>
 <body>
-    <nav>
-        <ul class="list">
-          <li class="list-item"><a href="Home">Strona główna</a></li>
-          <li class="list-item"><a href="About us">O nas</a></li>
-          <li class="list-item"><a href="Products">Nasza flota</a></li>
-          <li class="list-item"><a href="Team">Nasza ekipa</a></li>
-          <li class="list-item"><a href="Contact">Kontakt</a></li>
+  <!-- <ul class="movies">
+    <li class="movies__item title"></li>
+    <li class="movie__item yearOfProduction"></li>
+    <li class="movie__item likes"></li>
+  </ul>
+
+  <button class="movie__btn">Like</button> -->
+
+  <button id="menu__button" class="button">
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+  </button>
+
+  <nav class="navi">
+    <ul class="menu">
+      <li class="menu__item"><a href="#Home">Strona główna</a><id="Home"></id></li>
+      <li class="menu__item"><a href="#About us">O nas</id></li>
+      <li class="menu__item"><a href="Products">Nasza flota</a></li>
+      <li class="menu__item"><a href="Team">Nasza ekipa</a></li>
+      <li class="menu__item"><a href="Contact">Kontakt</a></li>
+    </ul>
+  </nav>
+
+
+
+  <div id="app">
+  <ul>
+   <li id="name"></li>
+   <li id="age"></li>
+   <li id="car"></li>
+   <li id="isWorking"></li>
+   <li id="hobbies"></li>
+   <li id="yearOfProduction"></li>
+  </ul>
+  
+  <button id="ageBtn">age++</button>
+  <button id="carBtn">change car</button>
+  <button id="activeBox">activeBox</button>
+  <ul class="list">
+    <li>list__item</li>
+    <li>list__item</li>
+    <li>list__item</li>
+    <li>list__item</li>
+    <li>list__item</li>
+    <button id="btnNext">next item</button>
+
+  </div>
+
+  <ul class="list">
+    <li id="firstName"></li>
+    <li id="lastName"></li>
+    <li id="age"></li>
+    </ul>
+  
+    <button id= "ageBtn">wiek</button>
+  
+
+
+      <!-- <nav>
+        <ul class="menu">
+          <li class="menu__item"><a href="#Home">Strona główna</a><id="Home"></id></li>
+          <li class="menu__item"><a href="#About us">O nas</id></li>
+          <li class="menu__item"><a href="Products">Nasza flota</a></li>
+          <li class="menu__item"><a href="Team">Nasza ekipa</a></li>
+          <li class="menu__item"><a href="Contact">Kontakt</a></li>
         </ul>
-      </nav>
-      <section class="hero">
-        <H1 class="main-headline">K_S Transport</H1>
-          <div class="hero-text-box">
-            <p class="sub-main">Na czas, na miejsce, na pewno</p>
-              <button class="hero-btn">Poznaj Nas</button>
-              <button class="hero-btn-hero-btn-outline">Zleć Transport</button>
+      </nav> -->
+
+
+
+
+
+      <section class="card">
+        <h1 class="card__main-headline">K_S Transport</h1>
+          <div class="card__text-box">
+            <p class="card__sub-main">Na czas, na miejsce, na pewno</p>
+              <button id="card__btn" class="card__btn">Poznaj Nas</button>
+              <button class="card__btn">Zleć Transport</button>
           </div>
       </section>
-    <header class="about-us-headline">
-      <h2>Poznaj Nas</h2>
-    </header>
-      <section class="about-us1">
-          <div class="about-us-text1">
-            <p>
-            KS_Transport to firma rodzinna, specjalizująca się w transporcie żywych zwierząt.
-            Nasze bogate doświadczenie jest potwierdzone obecnością na rynku od ponad dwudziestu lat.
-            Gwarantujemy najwyższą jakość świadczonych usług. 
-            </p>
+
+      <div>
+      </div>
+
+
+
+      <section class="card">
+        <h1 class="card__main-headline" id="About us">Poznaj Nas</h1>
+          <div class="card__text-box">
+            <div class="card__text-box--container">
+              <p>
+              KS_Transport to firma rodzinna, specjalizująca się w transporcie żywych zwierząt.
+              Nasze bogate doświadczenie jest potwierdzone obecnością na rynku od ponad dwudziestu lat.
+              Gwarantujemy najwyższą jakość świadczonych usług.
+              </p>
+              <p>
+                <img src="./assets/css/img/giphy.gif" style="width:200px; height: 50%;">
+              </p>
           </div>
-          <div class="about-us-photo">
-            <img src="../projekt_my_site_JK/assets/css/img/giphy.gif" style="width:200px; height: 50%; display:flex;">
-          </div>
+            </div>
       </section>
+
       <section class="about-us2">
         <div class="about-us-photo">
-          <img src="../projekt_my_site_JK/assets/css/img/giphy.gif" style="width: 200px; height: 50%; display:flex;">
+          <img src="./assets/css/img/giphy.gif" style="width: 200px; height: 50%; display:flex;">
         </div>
           <div class="about-us-text2">
             <p>
@@ -51,6 +122,9 @@
             </p>
           </div>
       </section>
+
+
+
     <header class="about-us-headline">
       <h2>Nasza flota</h2>
     </header>
@@ -66,10 +140,10 @@
       </section>
       <section class="list-flota-sticker">
         <div style="display:flex; justify-content: space-between; margin: 2%;">
-          <img src="../projekt_my_site_JK/assets/css/img/logistic-van-icon.png" style="width: 150px; height: 100px;">
-          <img src="../projekt_my_site_JK/assets/css/img/truck-icon.png" style="width: 150px; height: 100px;">
-          <img src="../projekt_my_site_JK/assets/css/img/logistic-truck-icon.png" style="width: 150px; height: 100px;">
-          <img src="../projekt_my_site_JK/assets/css/img/long-truck-icon.png" style="width: 150px; height: 100px;">
+          <img src="./assets/css/img/logistic-van-icon.png" style="width: 150px; height: 100px;">
+          <img src="./assets/css/img/truck-icon.png" style="width: 150px; height: 100px;">
+          <img src="./assets/css/img/logistic-truck-icon.png" style="width: 150px; height: 100px;">
+          <img src="./assets/css/img/long-truck-icon.png" style="width: 150px; height: 100px;">
         </div>
         <div class="about-us-text2" style="padding: 5%;">
           <p style="margin: 5%;">
@@ -113,5 +187,11 @@
       <header class="about-us-headline">
         <h2>Kontakt</h2>
       </header>
+      <section class="photo-text">
+      </section>
+            <p class="fb">
+              <span class="fb_text"> Sprawdz nas na facebook-u </span>
+            </p>
+            <script src="./assets/js/script.js"></script>
 </body>
 </html>
