@@ -1,9 +1,9 @@
-// let a = 97;
-// let b = 80;
-// let c = "97";
+let a = 97;
+let b = 80;
+let c = "97";
 
-// console.log(a + b)
-// console.log(a * b)
+console.log(a + b)
+console.log(a * b)
 
 // a++;
 // console.log(a);
@@ -280,32 +280,32 @@ const btnNext = document.getElementById(`btnNext`)
 let index = 0;
 
 
-    // const box = document.getElementsByClassName("box__item");
+//     const box = document.getElementsByClassName("box__item");
     
-    // for (let i =0; i< box.length; i++) {
-    //     box[i].style.backgroundColor = "yellow";
-    //  };
-    //  console.log(box.length);
+//     for (let i =0; i< box.length; i++) {
+//         box[i].style.backgroundColor = "yellow";
+//      };
+//      console.log(box.length);
 
-    //  const btnNext = document.getElementById("btnNext");
-    //  let index = 0;
+//      const btnNext = document.getElementById("btnNext");
+//      let index = 0;
 
-    //  let currentIndex = 0;
-    //  let previousIndex = 0;
+//      let currentIndex = 0;
+//      let previousIndex = 0;
 
-    //  box[index].style.backgroundColor = "#ff0000";
+//      box[index].style.backgroundColor = "#ff0000";
 
-    //  console.log(box[0])
+//      console.log(box[0])
 
-    //  btnNext.addEventListener("click", () => {
-    //   if (index=== box.length -1){
-    //     alert (`koniec`)
-    //     return;
-    //   }
-    //     index++;
-    //     console.log(box[index])
-    //     box[index].style.backgroundColor = "#ff0000";
-    //  })
+//      btnNext.addEventListener("click", () => {
+//       if (index=== box.length -1){
+//         alert (`koniec`)
+//         return;
+//       }
+//         index++;
+//         console.log(box[index])
+//         box[index].style.backgroundColor = "#ff0000";
+//      })
 
 
 
@@ -383,3 +383,391 @@ function checkAge() {
     alert(`Teraz możesz uczcić swoje zwycieństwo!`);
     }
 }
+
+function fact(n) {
+        if (n === 0 || n === 1) {
+          return 1;
+        } else {
+          return n * fact(n - 1);
+        }
+      } 
+    console.log(fact(5));   
+
+    function factorial(n) {
+      const memory = new Map([
+          [0, 1], [1, 1]
+      ])
+  
+      if (memory.has(n)) {
+          return memory.get(n);
+      } else {
+          memory.set(n, n * factorial(n-1))
+          return memory.get(n);
+      }
+    }
+      console.log(factorial(11));
+
+
+
+     function fibonacci(n) {
+        if (n <= 0) {
+          return 0;
+        } else if (n === 1) {
+          return 1;
+        } else {
+          return fibonacci(n - 1) + fibonacci(n - 2);
+        }
+      }
+      console.log(fibonacci(4));
+
+var array = [3, 1, 5, 2, 4];
+array.sort();
+console.log(array);
+
+
+var array = [5, 2, 4, 6, 1, 3, 56, 78, 89, 294];
+var sortedArray = insertionSort(array);
+
+      function insertionSort(array) {
+        var length = array.length;
+      
+        for (var i = 1; i < length; i++) {
+          var current = array[i];
+          var j = i - 1;
+      
+          while (j >= 0 && array[j] > current) {
+            array[j + 1] = array[j];
+            j--;
+          }
+      
+          array[j + 1] = current;
+        }
+      
+        return array;
+      }
+      console.log(sortedArray);
+
+      function bubbleSort(array) {
+        var length = array.length;
+      
+        for (var i = 0; i < length - 1; i++) {
+          for (var j = 0; j < length - 1 - i; j++) {
+            if (array[j] > array[j + 1]) {
+              var temp = array[j];
+              array[j] = array[j + 1];
+              array[j + 1] = temp;
+            }
+          }
+        }
+      
+        return array;
+      }
+      var array = [5, 2, 4, 6, 1, 3, 67, 88, 12, 56];
+      var bubblesortedArray = bubbleSort(array);
+      console.log(bubblesortedArray);
+
+
+
+
+
+
+
+      function mergeSortedArrays(arr1, arr2) {
+        var mergedArray = [];
+        var i = 0;
+        var j = 0;
+      
+        while (i < arr1.length && j < arr2.length) {
+          if (arr1[i] < arr2[j]) {
+            mergedArray.push(arr1[i]);
+            i++;
+          } else {
+            mergedArray.push(arr2[j]);
+            j++;
+          }
+        }
+      
+        while (i < arr1.length) {
+          mergedArray.push(arr1[i]);
+          i++;
+        }
+      
+        while (j < arr2.length) {
+          mergedArray.push(arr2[j]);
+          j++;
+        }
+      
+        return mergedArray;
+      }
+      
+      var arr1 = [1, 21, 32, 43, 54, 65, 76, 87, 98];
+      var arr2 = [18, 27, 36, 45, 54, 63, 72, 81, 90];
+      var mergedArray = mergeSortedArrays(arr1, arr2);
+      console.log(mergedArray);
+      
+      function bubbleSort(mergedArray) {
+        var length = mergedArray;
+      
+        for (var i = 0; i < length - 1; i++) {
+          for (var j = 0; j < length - 1 - i; j++) {
+            if (array[j] > array[j + 1]) {
+              var temp = array[j];
+              array[j] = array[j + 1];
+              array[j + 1] = temp;
+            }
+          }
+        }
+      
+        return array;
+      }
+      var array = mergedArray;
+      var bubblesortedArray = bubbleSort(array);
+      console.log(bubblesortedArray);
+
+      function fibonacci(n) {
+        if (n === 0) {
+            return 0;
+        } else if (n === 1) {
+            return 1;
+        } else {
+            return fibonacci(n - 1) + fibonacci(n - 2);
+        }
+    }
+
+    function merge(A, B) {
+      var i1 = 0, i2 = 0;
+      var result = [];
+      while(i1 < A.length && i2 < B.length) {
+          if (A[i1] < B[i2]) result.push(A[i1++]);
+          else result.push(B[i2++]);
+      }
+      for (; i1 < A.length; i1++) result.push(A[i1]);
+      for (; i2 < B.length; i2++) result.push(B[i2]);
+      return result;
+  }
+  
+  function mergeSort(L) {
+      if (L.length < 2) return L;
+      var mid = Math.floor(L.length / 2);
+      var A = L.slice(0,mid), B = L.slice(mid);
+      return merge(mergeSort(A), mergeSort(B));
+  }
+  
+  
+  console.log(mergeSort([2,5,2,1,5,4,2]));
+
+  function factorial(n) {
+    let result = 1;
+    for (let i = 1; i <= n; i++) {
+        result = result * i;
+    }
+    return result;
+}
+console.log(factorial(5))
+
+function binarySearch(arr, x, start, end) {
+  if (start > end) return false;
+
+  let mid = Math.floor((start + end) / 2);
+
+  if (arr[mid] == x) return true;
+
+  if(arr[mid] > x)
+      return binarySearch(arr, x, start, mid - 1);
+  else
+      return binarySearch(arr, x, mid + 1, end);
+}
+
+console.log(binarySearch[1,3,5,6,7,8,34,45])
+
+function quickSort(arr) {
+  if (arr.length <= 1) {
+    return arr;
+  }
+
+  const pivot = arr[Math.floor(arr.length / 2)];
+  const less = [];
+  const equal = [];
+  const greater = [];
+
+  for (let element of arr) {
+    if (element < pivot) {
+      less.push(element);
+    } else if (element === pivot) {
+      equal.push(element);
+    } else {
+      greater.push(element);
+    }
+  }
+
+  return [...quickSort(less), ...equal, ...quickSort(greater)];
+}
+
+const unsortedArray = [5,3,8,1,2,7,8,4,3,4,2,8,9,5,3,1,2,0,6,3,2,1,];
+const result = quickSort(unsortedArray);
+console.log(result);
+
+
+function calculatePiMonteCarlo(numPoints) {
+  let pointsInsideCircle = 0;
+
+  for (let i = 0; i < numPoints; i++) {
+    const x = Math.random();
+    const y = Math.random();
+
+    // Sprawdzenie, czy punkt (x, y) znajduje się wewnątrz okręgu
+    if (x * x + y * y <= 1) {
+      pointsInsideCircle++;
+    }
+  }
+
+  // Obliczenie przybliżonej wartości liczby pi
+  const pi = (pointsInsideCircle / numPoints) * 4;
+  return pi;
+}
+
+// Przykładowe użycie
+const numPoints = 10000000;
+const approximatePi = calculatePiMonteCarlo(numPoints);
+console.log(`Przybliżona wartość liczby pi: ${approximatePi}`);
+
+function calcPi(n){
+let points = 0;
+
+for (let i = 0; i < n; i++ ) {
+  const x = Math.random();
+  const y = Math.random();
+if (x **2 + y**2 <= 1) {
+points++;
+}
+}
+return (points / n) * 4;
+}
+const n = 10000;
+const przybliżonejPi = calcPi(n);
+console.log({przybliżonejPi});
+
+
+
+class MyList {
+  constructor(){
+    this.array = [];
+  }
+  set(index, value){
+    this.array[index] = value;
+  }
+  length() {
+    return this.array.length;
+  }
+  insert(index, value) {
+    this.array.splice(index, 0, value);
+  }
+  remove(index) {
+    this.array.splice(index, 1);
+  }
+}
+const NewList = new MyList();
+
+NewList.set(0, 1);
+NewList.set(1, 10);
+NewList.set(2, 56);
+NewList.set(3, 'Jacek');
+NewList.set(4, 'dom');
+NewList.set(5, 67);
+NewList.set(6, 132);
+NewList.set(7, `rzeka`);
+
+console.log(NewList.length());
+console.log(NewList.array);
+
+const object = { a: 1, b: 2, c: 3 };
+for (const math in object)
+console.log(object);
+alert ('tablica Matyldy');
+confirm('Czy lubisz Jacka?');
+
+const array1 = ['a', 'b', 'c'];
+for (const element of array1);
+console.log(array1);
+
+const number = 10;
+
+if(number > 0)
+{
+  console.log('Jest dodatnia')
+}
+var dict = new Object()
+var dict = {
+    "firstName": "Jan",
+    "lastName": "Kowalski",
+    "age": 30,
+    "avgScore": 30.5
+}
+
+console.log(
+    Object.keys(dict)
+)
+
+console.log(
+    Object.values(dict)
+)
+let numbers = [2, 4, 6, 8, 16, 32, 64, 128]
+let func = (element) => Math.sqrt(element)
+
+console.log(
+    numbers.map(func)
+)
+
+console.log(
+    numbers
+)
+
+const memory = new Map([
+  [0, 0], [1, 1]
+]);
+function fib(n){
+  if (memory.has(n)) {
+      return memory.get(n);
+  } else {
+      memory.set(n, fib(n - 1) + fib(n - 2))
+      return memory.get(n);
+  }
+}
+
+function bubbleSort(array) {
+  for (let i = 0; i < array.length; i++) {
+      console.log("Iteracja nr", i, "Status listy:", array)
+
+      for (let j = 0; j < array.length - i - 1; j++) {
+          if (array[j] < array[j + 1]) {
+              let temp = array[j]
+              array[j] = array[j + 1]
+              array[j + 1] = temp
+          }
+      }
+  }
+
+  console.log("Posortowana tablica")
+  console.log(array)
+}
+
+let numberss = [1, 7, 12, 1, 0, 22, 1, 3, 5]
+bubbleSort(numberss)
+
+function insertionSort(arr) {
+  let len = arr.length;
+
+  for (let i = 1; i < len; i++) {
+      let currentElement = arr[i];
+      let j = i - 1;
+      while (j >= 0 && arr[j] > currentElement) {
+          arr[j + 1] = arr[j];
+          j--;
+      }
+      arr[j + 1] = currentElement;
+  }
+  return arr;
+}
+let numbers1 = [64, 34, 25, 12, 22, 11, 90];
+let sortedArray1 = insertionSort(numbers1);
+console.log(sortedArray1);
